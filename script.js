@@ -24,3 +24,15 @@ const countdownInterval = setInterval(() => {
         document.getElementById("countdown").innerHTML = "O evento já começou!";
     }
 }, 1000);
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+    event.preventDefault();
+    data = {nome: document.getElementById('nome').value}
+    fetch('https://script.google.com/macros/s/AKfycbwuJgdI0xjHubsiI3xz3zoUR3zkdMYbPBwOfllXAbQXx7QwVwV6c2ptmHME6wp4C5wh_Q/exec', {
+        method: 'POST',
+        'Content-Type': 'application/json',
+        body: JSON.stringify(data)
+      })
+      .then(response => response.text())
+      
+});
