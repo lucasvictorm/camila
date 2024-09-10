@@ -252,14 +252,21 @@ main{
 .card{
     width: 200px;
     height: 200px;
-    background-color: #000262;
+    background-color: #ffffff;
     border-radius: 30px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    color: var(--azul-claro);
+    box-shadow: 7px 4px 15px 0px #545454;
+    gap: 5px;
 }
 .card img{
     width: 110px;
 
+}
+
+#bloco4{
+    display: flex;
 }
