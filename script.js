@@ -37,4 +37,8 @@ document.getElementById("formulario").addEventListener("submit", function(event)
       .then(response => response.text());
     
       document.getElementById('nome').value ='';
+
+      document.getElementById('botaoConfirmar').style.display = 'none';
+
+      document.getElementById('textoConfirmar').style.display = 'block';
 });

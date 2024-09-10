@@ -244,6 +244,15 @@ main{
     border: none;
 }
 
+#bloco2 form p{
+    font-family: "Courgette", cursive;
+    margin-top: 20px;
+    display: none;
+
+    color: white;
+    
+}
+
 #bloco3{
     margin-top: 50px;
     display: flex;
