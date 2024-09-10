@@ -1,5 +1,5 @@
 
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&display=swap');
 /*font-family: "Satisfy", system-ui;
 font-family: "Dancing Script", system-ui;
 font-family: "Roboto", sans-serif;*/
@@ -169,6 +169,8 @@ main{
 #bloco1{
     display: flex;
     flex-direction: column;
+    background-image: url('imagens/bloco1.jpg');
+    background-size: cover;
 }
 #separador{
     
@@ -183,11 +185,15 @@ main{
 }
 
 #bloco2{
-    padding: 25px 0px;
+    background-image: url('imagens/bloco2.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+    padding: 50px 0px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: #000262;
+   
     color: white;
     gap: 20px;
 }
@@ -212,7 +218,7 @@ main{
    
     text-align: start;
     width: 100%;
-    font-family: "Dancing Script", system-ui;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 #bloco2 form input{
@@ -221,6 +227,16 @@ main{
     border: none;
     border-radius: 5px;
     padding: 0px 10px;
-    font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#bloco2 form button{
+    font-family: "Courgette", cursive;
+    margin-top: 20px;
+    background-color: #062860;
+    padding: 15px;
+    border-radius: 5px;
+    color: white;
+    border: none;
 }
