@@ -12,6 +12,7 @@ font-family: "Roboto", sans-serif;*/
 :root{
     --azul-claro: #5f95ed;
     --azul-medio: #000664;
+    --azul-medio2: #000877;
     --cor-de-fundo: #fffcf6;
 }
 body{
@@ -67,14 +68,14 @@ body{
     margin: 10px 0px;
 }
 #nomes{
-    margin: 40px 0px;
+    margin: 40px 0px 0px 0px;
 }
 #nomes div{
     font-family: "Dancing Script", system-ui;
     text-align: center;
     font-weight: bold;
     font-size: 60px;
-    color: var(--azul-medio);
+    color: var(--azul-medio2);
     
 }
 
@@ -85,3 +86,78 @@ body{
     text-align: center;
     font-size: 18px;
 }
+
+#dataDiv{
+    display: flex;
+    align-items: center;
+    
+    
+    flex-direction: column;
+}
+
+#diaP{
+    font-family: "Roboto", sans-serif;
+    color: var(--azul-medio2);
+    font-size: 60px;
+    text-align: center;
+}
+
+#mesP{
+    font-family: "Dancing Script", system-ui;
+    color: #194ca9;
+    font-size: 60px;
+    text-align: center;
+    margin-top: -10px;
+}
+
+#horaP{
+    font-family: 'Times New Roman', Times, serif;
+    color: #000262;
+    font-size: 20px;
+}
+#timerDiv{
+    display: flex;
+    flex-direction: column;
+}
+
+#timers{
+    display: flex;
+    justify-content: center;
+    
+}
+
+#timers div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#timers div div{
+    margin-top: 20px;
+    width: 80px;
+    height: 80px;
+    background-image: url('imagens/data.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    color: white;
+    font-size: 40px;
+}
+
+#timers div p{
+    font-family: "Roboto", sans-serif;
+    color: #232323;
+    display: flex;
+    
+    justify-content: center;
+    
+    gap: 20px;
+    margin-top: 5px;
+    letter-spacing: -1px;
+}
+
+
