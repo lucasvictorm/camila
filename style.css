@@ -1,0 +1,67 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Satisfy&display=swap');
+/*font-family: "Satisfy", system-ui;
+font-family: "Dancing Script", system-ui;*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root{
+    --azul-claro: #5f95ed;
+    --azul-medio: #000664;
+    --cor-de-fundo: #fffcf6;
+}
+body{
+    background-color: var(--cor-de-fundo);
+}
+.aspa{
+    width: 40px;
+    transform: rotate(180deg);
+}
+#aspaBaixo {
+    transform: rotate(180deg) scaleX(-1);
+    text-align: end;
+
+}
+
+.divAspa{
+    padding: 0px 30px;
+    
+}
+#divAspaCima{
+   
+    margin-bottom: -10px;
+}
+#divAspaBaixo{
+    text-align: end;
+    margin-top: -10px;
+}
+
+#versiculo{
+    font-family: "Satisfy", system-ui;
+    
+    text-align: center;
+    padding: 0px 30px;
+    font-size: 1.5em;
+    color: var(--azul-claro);
+}
+#versoDiv{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+
+}
+
+#versoDiv p{
+    font-family: "Satisfy", system-ui;
+    color: var(--azul-medio);
+    font-weight: bold;
+}
+.linha{
+    width: 100px;
+    height: 3px;
+    background-color: var(--azul-medio);
+    margin: 10px 0px;
+}
