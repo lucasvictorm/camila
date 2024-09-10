@@ -23,7 +23,7 @@ body{
 main{
     display: flex;
     flex-direction: column;
-    max-width: 768px;
+    max-width: 500px;
     margin: auto;
 }
 
