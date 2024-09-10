@@ -274,6 +274,7 @@ main{
     color: var(--azul-claro);
     box-shadow: 7px 4px 15px 0px #545454;
     gap: 5px;
+    text-decoration: none;
    
 }
 .card img{
