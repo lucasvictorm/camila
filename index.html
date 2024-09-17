@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Overlan e Camila</title>
     <link rel="stylesheet" href="style.css">
-    
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     
 </head>
 <body>
@@ -65,7 +65,7 @@
             <div id="separador"></div>
     
         </div>
-        <div id="bloco2">
+        <div id="bloco2" data-aos="fade-up" data-aos-duration="1500">
             <h2>Confirme sua Presença</h2>
             <form id="formulario">
                 <label for="nome">Nome</label>
@@ -75,12 +75,12 @@
             </form>
         </div>
         <div id="bloco3">
-            <div class="card">
+            <a class="card" data-aos="fade-right" data-aos-duration="1000">
                 <img src="imagens/presente2.png" alt="Presente">
                 <p>Sugestões de presente</p>
-            </div>
+            </a>
             
-            <a href="https://maps.app.goo.gl/pjWnhD4Y3M5avomA8" class="card">
+            <a href="https://maps.app.goo.gl/pjWnhD4Y3M5avomA8" data-aos="fade-left" data-aos-duration="1000" class="card ">
                 
                 <img src="imagens/localizacao2.png" alt="">
                 <p>Localização</p>
@@ -90,7 +90,7 @@
             <img src="imagens/manual.png" alt="">
         </div>
         <div id="bloco4">
-            <img src="imagens/bingo.png" alt="">
+            <img data-aos="zoom-in" data-aos-duration="1000" src="imagens/bingo.png" alt="">
             <p id="concorra">Concorra a:</p>
             <ul>
                 
@@ -115,4 +115,8 @@
     
 </body>
 <script src="script.js"></script>
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </html>
