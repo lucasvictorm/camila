@@ -1,4 +1,4 @@
-const eventDate = new Date("2024-11-11T17:00:00").getTime();
+const eventDate = new Date("2024-11-11T16:00:00").getTime();
 
 // Atualiza o contador a cada segundo
 const countdownInterval = setInterval(() => {
