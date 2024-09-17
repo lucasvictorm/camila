@@ -198,7 +198,7 @@
         .then(response => response.text())
         .then(text => console.log(text))
         .catch(error => console.error('Erro:', error));
-
+        setTimeout(()=>{}, 2000);
         location.reload();
 });
     
