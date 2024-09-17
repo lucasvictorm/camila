@@ -253,6 +253,7 @@ main{
     box-shadow: 7px 4px 15px 0px #c8c8c8;
     gap: 5px;
     text-decoration: none;
+    font-size: 15px;
    
 }
 .card img{

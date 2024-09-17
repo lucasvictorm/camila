@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sugestões de presentes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Courgette&family=Dancing+Script:wght@400..700&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Satisfy&family=Noto+Serif:ital,wght@0,100..900;1,100..900&display=swap');
+
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        main{
+            max-width: 450px;
+        }
+        header{
+            
+            padding: 20px;
+            padding-left: 50px;
+            
+        }
+        h1{
+            font-family: 'Dancing Script', cursive;
+            font-size: 50px;
+        }
+        #presente{
+            font-size: 40px;
+            margin-left: 20px;
+        }
+
+        form>div{
+            padding-left: 50px;
+            padding-top: 40px;
+        }
+
+        h2{
+            font-family: 'Courgette', cursive;
+            font-size: 30px;
+        }
+
+        li{
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <header>
+            <h1>Sugestões</h1>
+            <h1 id="presente">De Presente</h1>
+        </header>
+        <form>
+            <div>
+                <h2>Cozinha</h2>
+                <ul id="CozinhaUl">
+                    <li>Panela de pressão</li>
+                    <li>Panela de arroz</li>
+                    <li>Panela de pressão</li>
+                    <li>Panela de arroz</li>
+                    <li>Panela de pressão</li>
+                    <li>Panela de arroz</li>
+                </ul>
+            </div>
+
+            <input type="checkbox" name="" id="">
+        </form>
+        
+    </main>
+   
+    
+
+</body>
+<script>
+    let itens = {
+        cozinha: [
+            'Panela de pressão',
+            'Panela de arroz',
+            
+        ]
+    }
+
+    let Cozinhaul = document.getElementById('CozinhaUl');
+    itens.
+    array.forEach(element => {
+        
+    });
+    Cozinhaul.innerHTML = `<input type="checkbox" name="${itens.cozinha[]}" id="${}">` ;
+
+</script>
+</html>
