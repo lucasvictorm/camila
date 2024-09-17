@@ -25,25 +25,39 @@ main{
     flex-direction: column;
     max-width: 500px;
     margin: auto;
+    background-image: url('imagens/background2.png');
 }
 
 
-
+#bloco1{
+    display: flex;
+    flex-direction: column;
+    background-image: url('imagens/bloco1.png');
+    background-size: cover;
+    padding-top: 50px;
+    padding-bottom: 60px;
+}
 
 #versiculo{
     font-family: 'Times New Roman', Times, serif;
-    
+    width: 90%;
     text-align: end;
     padding: 0px 30px;
     font-size: 17px;
-    color: var(--azul-claro);
+    color: #4275c8;
 }
 #verso{
     font-family: 'Times New Roman', Times, serif;
     text-align: end;
     padding: 0px 30px;
     font-size: 17px;
-    color: var(--azul-medio2);
+    color: #4275c8;
+}
+
+#versiculoDiv{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
 }
 
 
@@ -125,13 +139,7 @@ main{
     height: 100%;
 }
 
-#bloco1{
-    display: flex;
-    flex-direction: column;
-    background-image: url('imagens/bloco1.jpg');
-    background-size: cover;
-    margin-top: 50px;
-}
+
 #separador{
     
     width: 80%;
@@ -243,16 +251,13 @@ main{
     padding: 150px 0px 50px 0px;
     display: flex;
     flex-direction: column;
-    background-image: url('imagens/bloco4.jpg');
-    background-size: cover;
     
-    background-position: center;
     align-items: center;
     color: var(--azul-escuro);
 }
 
 #bloco4>img{
-    width: 100px;
+    width: 130px;
 }
 
 #concorra{
@@ -278,7 +283,7 @@ main{
 }
 
 #bloco4 div img{
-    width: 45px;
+    width: 30px;
 }
 
 #bloco4 div div{
@@ -288,13 +293,13 @@ main{
 }
 
 #numero{
-    color: white;
+    color: #1140a9;
     font-size: 22px;
 }
 
 #preco{
     margin-top: 10px;
-    color: white;
+    color: #1140a9;
     font-size: 22px;
 }
 
