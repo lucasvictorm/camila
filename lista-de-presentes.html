@@ -14,10 +14,15 @@
         }
 
         main{
+            margin: auto;
             max-width: 450px;
+            padding-bottom: 20px;
+            
+            background-image: url('imagens/background2.png');
         }
         header{
-            
+            background-image: url('imagens/fundoLista.png');
+            background-size: cover;
             padding: 20px;
             padding-left: 50px;
             
@@ -31,6 +36,11 @@
             margin-left: 20px;
         }
 
+        p{
+            color: #000148;
+            padding-left: 50px;
+        }
+
         form>div{
             padding-left: 50px;
             padding-top: 40px;
@@ -39,10 +49,41 @@
         h2{
             font-family: 'Courgette', cursive;
             font-size: 30px;
+            padding-bottom: 20px;
+            color: #000148;
         }
 
         li{
             font-size: 25px;
+        }
+
+        ul{
+            list-style: none;
+        }
+
+        input[type="checkbox"]{
+            width: 20px;
+            height: 20px;
+            margin: 10px;
+        }
+
+        main form>div:nth-of-type(even){
+            text-align: end;
+            padding-right: 50px;
+        }
+
+        button{
+            position: sticky;
+            bottom: 50px;
+            left: 50px;
+            background-color: #000148;
+            color: white;
+            padding: 20px;
+            font-size: 15px;
+            font-family: 'Courgette', cursive;
+            border: none;
+            border-radius: 15px;
+            
         }
     </style>
 </head>
@@ -51,21 +92,40 @@
         <header>
             <h1>Sugestões</h1>
             <h1 id="presente">De Presente</h1>
+            
         </header>
+        <p>Selecione um ou mais presentes e clique em "Escolher presentes"</p>
         <form>
             <div>
                 <h2>Cozinha</h2>
-                <ul id="CozinhaUl">
-                    <li>Panela de pressão</li>
-                    <li>Panela de arroz</li>
-                    <li>Panela de pressão</li>
-                    <li>Panela de arroz</li>
-                    <li>Panela de pressão</li>
-                    <li>Panela de arroz</li>
+                <ul id="cozinhaUl">
+                   
                 </ul>
             </div>
 
-            <input type="checkbox" name="" id="">
+            <div>
+                <h2>Sala</h2>
+                <ul id="salaUl">
+                   
+                </ul>
+            </div>
+
+            <div>
+                <h2>Banheiro</h2>
+                <ul id="banheiroUl">
+                   
+                </ul>
+            </div>
+
+            <div>
+                <h2>Quarto</h2>
+                <ul id="quartoUl">
+                   
+                </ul>
+            </div>
+
+            <button type="submit">Escolher presentes</button>
+          
         </form>
         
     </main>
@@ -74,20 +134,73 @@
 
 </body>
 <script>
-    let itens = {
-        cozinha: [
-            'Panela de pressão',
-            'Panela de arroz',
-            
-        ]
-    }
-
-    let Cozinhaul = document.getElementById('CozinhaUl');
-    itens.
-    array.forEach(element => {
-        
+    
+    fetch('https://script.google.com/macros/s/AKfycbwJIfuMV2DgQTDtZ5djMlbVlq254MOTW-AtIftwbZOYelYg4cihBfXEOoLrz--uL7-M/exec'
+    
+    ).then(response => response.json())
+    .then(data => {
+       
+        itens = data;
+        montarLista(itens);
     });
-    Cozinhaul.innerHTML = `<input type="checkbox" name="${itens.cozinha[]}" id="${}">` ;
+    
+
+    function montarLista(itens){
+        let Cozinhaul = document.getElementById('cozinhaUl');
+        let Quartoul = document.getElementById('quartoUl');
+        let Banheiroul = document.getElementById('banheiroUl');
+        let Salaul = document.getElementById('salaUl');
+
+        itens.forEach(item => {
+            
+            if(item.room == 'cozinha'){
+                    Cozinhaul.innerHTML += `<li><input type="checkbox" name="${item.item}"id="${item.item}"><label for="${item.item}">${item.item}</label></li>` ;
+                }
+
+            else if(item.room == 'sala'){
+                Salaul.innerHTML += `<li><label for="${item.item}">${item.item}</label><input type="checkbox" name="${item.item}"id="${item.item}"></li>` ;
+            }
+            else if(item.room == 'banheiro'){
+                Banheiroul.innerHTML += `<li><input type="checkbox" name="${item.item}"id="${item.item}"><label for="${item.item}">${item.item}</label></li>` ;
+            }
+
+            else if(item.room == 'quarto'){
+                Quartoul.innerHTML += `<li><label for="${item.item}">${item.item}</label><input type="checkbox" name="${item.item}"id="${item.item}"></li>` ;
+            }
+        });
+        
+            
+       
+           
+               
+
+                
+            }
+       
+    document.querySelector('form').addEventListener('submit', function(event) {
+    // Coleta os dados dos checkboxes selecionados
+    event.preventDefault();
+    var selecoes = [];
+    document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox) {
+        var item = checkbox.getAttribute('name');
+        selecoes.push(item);
+    });
+    console.log(selecoes)
+
+    /*// Envia os dados para o Google Apps Script
+    fetch('https://script.google.com/macros/s/SEU_SCRIPT_ID/exec', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(selecoes)
+    })
+    .then(response => response.text())
+    .then(text => console.log(text))
+    .catch(error => console.error('Erro:', error));*/
+});
+    
+    
 
 </script>
 </html>
