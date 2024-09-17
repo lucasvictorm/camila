@@ -179,25 +179,27 @@
        
     document.querySelector('form').addEventListener('submit', function(event) {
     // Coleta os dados dos checkboxes selecionados
-    event.preventDefault();
-    var selecoes = [];
-    document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox) {
-        var item = checkbox.getAttribute('name');
-        selecoes.push(item);
-    });
-    console.log(selecoes)
+        event.preventDefault();
+        var selecoes = [];
+        document.querySelectorAll('input[type="checkbox"]:checked').forEach(function(checkbox) {
+            var item = checkbox.getAttribute('name');
+            selecoes.push(item);
+        });
+        console.log(selecoes)
 
-    /*// Envia os dados para o Google Apps Script
-    fetch('https://script.google.com/macros/s/SEU_SCRIPT_ID/exec', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json'
-        },
-        body: JSON.stringify(selecoes)
-    })
-    .then(response => response.text())
-    .then(text => console.log(text))
-    .catch(error => console.error('Erro:', error));*/
+        // Envia os dados para o Google Apps Script
+        fetch('https://script.google.com/macros/s/AKfycbwJIfuMV2DgQTDtZ5djMlbVlq254MOTW-AtIftwbZOYelYg4cihBfXEOoLrz--uL7-M/exec', {
+            method: 'POST',
+        
+            'Content-Type': 'application/json',
+        
+            body: JSON.stringify(selecoes)
+        })
+        .then(response => response.text())
+        .then(text => console.log(text))
+        .catch(error => console.error('Erro:', error));
+
+        location.reload();
 });
     
     
