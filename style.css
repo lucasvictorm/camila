@@ -220,7 +220,7 @@ main{
     margin-top: 20px;
     display: none;
 
-    color: white;
+    
     
 }
 
@@ -344,4 +344,8 @@ audio{
 #bloco5 img{
     width: 90%;
 
+}
+
+#textoConfirmar{
+    
 }
